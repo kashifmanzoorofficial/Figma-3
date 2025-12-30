@@ -11,7 +11,7 @@ body {
 
 .main-container {
   max-width: 1440px;
-  width: 85%;
+  width:85%;
   margin: 0 auto;
 }
 
@@ -26,10 +26,10 @@ body {
 /* Header */
 .header {
   height: 80px;
-  border-bottom: 1px solid #eee;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.header-inner {
+.header-inside {
   height: 100%;
   display: flex;
   align-items: center;
@@ -61,9 +61,21 @@ body {
 
 }
 
+.nav span:hover{
+  border-bottom: 1px solid  #3b82f6;
+}
+
+.nav a:hover {
+border-bottom: 1px solid  #3b82f6;
+}
+
 .nav .active {
   color: #3b82f6;
 }
+
+
+
+
 
 
 .header-actions {
@@ -95,15 +107,14 @@ body {
   cursor: pointer;
 }
 
-
-
-
-
 /* 2= hero section */
 
 .hero {
   width: 100%;
+
 }
+
+
 
 
 .hero-layout {
@@ -163,7 +174,6 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
-
   display: flex;
   align-items: center;
   gap: 40px;
@@ -188,6 +198,11 @@ body {
   min-width: 300px;
 }
 
+.hero-content h1 {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
 .hero-tag {
   display: flex;
   align-items: center;
@@ -207,7 +222,7 @@ body {
 }
 
 .hero-desc {
-  margin: 16px 0 32px;
+  margin: 20px 0 50px;
   max-width: 480px;
   font-size: 16px;
 }
@@ -393,12 +408,12 @@ body {
   min-width: 300px;
 }
 
-.section-5 .cont-right h2{
+.section-5 .cont-right h2 {
   margin-top: 50px;
-  
+
 }
 
-.section-5 .cont-right .p-2  {
+.section-5 .cont-right .p-2 {
   margin-top: 65px;
 }
 
@@ -450,6 +465,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+
 }
 
 .yellow-bar {
@@ -491,7 +507,6 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: #1e1f3f;
-
   padding: 30px 20px;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -504,6 +519,16 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
+.divider{
+
+ flex-shrink: 0;
+  width: 2px;
+  height: 40px;
+  background-color:#504848;
+}
+
+
 
 .section-6 .stat h3 {
   font-size: 2rem;
@@ -526,6 +551,14 @@ body {
   .section-6 {
     flex-direction: column;
     padding: 20px 10px;
+  }
+
+  .section-6 .divider{
+     .divider {
+    width: 60%;
+    height: 2px;
+    margin: 10px 0;
+  }
   }
 
   .section-6 .stat h3 {
@@ -557,7 +590,7 @@ body {
   align-items: center;
 
   gap: 10px;
- 
+
   justify-content: center;
 
 }
@@ -572,12 +605,12 @@ body {
   justify-content: center;
 
   flex-wrap: wrap;
- 
+
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 80px;
- 
+
 }
 
 .categories ul li {
@@ -798,12 +831,12 @@ body {
 
 
 .call-to-action {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 60px auto 0;
   margin-bottom: -100px;
   padding: 50px 30px;
   border-radius: 16px;
- background-image: url(images/WhatsApp\ Image\ 2025-12-29\ at\ 12.08.37\ PM.jpeg);
+  background-image: url(images/WhatsApp\ Image\ 2025-12-29\ at\ 12.08.37\ PM.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -855,11 +888,11 @@ body {
 
 /* footer-section */
 
-.footer-last p{
+.footer-last p {
   width: 300px;
 }
 
-.footer-last .part-1 input{
+.footer-last .part-1 input {
   display: block;
   padding-top: 21px;
   padding-bottom: 21px;
@@ -895,6 +928,8 @@ footer {
 }
 
 
+
+
 .f-line-1 {
   max-width: 320px;
 }
@@ -905,8 +940,10 @@ footer {
 
 .f-line-1 p {
   margin-bottom: 24px;
+  
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
+
 }
 
 .f-line-1 input {
@@ -1001,10 +1038,7 @@ footer {
 
 /* mobile */
 @media (max-width: 576px) {
-  .btn-primary {
-    display: none;
-  }
-
+ 
   .header {
     height: 64px;
   }
@@ -1079,7 +1113,7 @@ footer {
 
   .logos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 24px;
     justify-items: center;
   }
@@ -1093,7 +1127,7 @@ footer {
 /* Responsive */
 @media (max-width: 992px) {
   .hero-3-boxes {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -1147,7 +1181,8 @@ footer {
     font-size: 1.8rem;
   }
 }
-  /* tablet */
+
+/* tablet */
 @media (max-width: 768px) {
   .section-5 {
     flex-direction: column;
@@ -1216,18 +1251,21 @@ footer {
     gap: 32px;
   }
 
- 
+
   .f-line-1 {
     grid-column: span 2;
   }
 
-  
+
   .f-line-2 {
     display: none;
   }
 
- 
+
   .f-line-3:last-child {
     grid-column: span 2;
   }
 }
+
+
+
